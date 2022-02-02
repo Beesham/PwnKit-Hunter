@@ -8,7 +8,6 @@
 int main(void)
 {
     puts("---> PwnKit-Hunter <---\n");
-    puts("[*] DISCLAIMER: This tool is only valid on Debian, Ubuntu, and their variants.");
 	
     pid_t pid = fork();
      
@@ -32,10 +31,10 @@ int main(void)
 
             // The current version is patched.
             if (exit_status == 1) {
-            	puts("[+] Your policykit-1 package is up-to-date. Keep updating and being secured.\n");
+            	puts("[+] Your polkit package is not vulnerable\n");
             }
             else {
-            	puts("[-] Your policykit-1 package is vulnerable.\n[*]Use: 'apt install policykit-1' to update to the patched version.\n");
+            	puts("[-] Your polkit package is vulnerable.\n[*]Use: 'yum update polkit' to update to the patched version.\n");
             }
         }
     }
